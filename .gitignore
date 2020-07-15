@@ -2,6 +2,8 @@
 .vscode/
 # Savefiles
 *.npz
+# log files
+log/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
