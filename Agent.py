@@ -181,7 +181,7 @@ class Player():
         if done:
             tf.summary.scalar('Score', self.score, self.rounds)
             tf.summary.scalar('Reward', self.cumreward, self.rounds)
-            print('{0} round({1} steps) || Score: {2} | Reward: {3:.1f}'.format(
+            print('\n{0} round({1} steps) || Score: {2} | Reward: {3:.1f}'.format(
                 self.rounds, self.current_steps, self.score, self.cumreward
             ))
             self.score = 0
