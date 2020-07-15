@@ -44,6 +44,9 @@ if args.load :
     player = Player(env.observation_space, env.action_space,
                 args.load, args.log_name, cur_loop*total_steps, cur_r,
                 buf_full, load_buffer, buf_count)
+elif args.log_name:
+    # If log directory is explicitely selected
+    player = Player(env.observation_space, env.action_space, log_name=args.log_name)
 else :
     player = Player(env.observation_space, env.action_space)
 if not args.vm :
