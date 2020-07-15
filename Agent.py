@@ -116,8 +116,7 @@ class Player():
                             inputs.shape[2]*inputs.shape[3]))(inputs)
         x = layers.Conv1D(64, 7, strides=2, activation='relu')(x)
         x = layers.Conv1D(32, 5, strides=2, activation='relu')(x)
-        x = layers.Conv1D(16, 3, strides=2, activation='relu')(x)
-        outputs = layers.BatchNormalization()(x)
+        outputs = layers.Conv1D(16, 3, strides=2, activation='relu')(x)
         return keras.Model(inputs=inputs, outputs=outputs, 
                     name=left_or_right+'_eye')
 
